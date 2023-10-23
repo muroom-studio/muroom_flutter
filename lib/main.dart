@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   MyApp({Key? key}) : super(key: key);
 
   final GoRouter _router = GoRouter(
-    initialLocation: "/start",
+    initialLocation: "/home",
     routes: [
       GoRoute(
         path: "/start",

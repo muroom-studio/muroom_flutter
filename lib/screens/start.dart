@@ -32,10 +32,10 @@ class StartScreen extends StatelessWidget {
               clipBehavior: Clip.none,
               children: [
                 Positioned(
-                  left: 4,
-                  top: 4,
+                  left: 3,
+                  top: 3,
                   child: Opacity(
-                    opacity: 0.6,
+                    opacity: 1,
                     child: Image.asset(
                       'assets/images/MUROOM_LOGO_SHADOW.png',
                       width: 120,
@@ -45,7 +45,7 @@ class StartScreen extends StatelessWidget {
                 ),
                 Positioned(
                   child: BackdropFilter(
-                    filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
+                    filter: ImageFilter.blur(sigmaX: 7.0, sigmaY: 7.0),
                     child: Image.asset(
                       'assets/images/MUROOM_LOGO.png',
                       width: 120,
@@ -64,7 +64,7 @@ class StartScreen extends StatelessWidget {
                 color: Colors.white,
                 shadows: [
                   Shadow(
-                    color: Colors.black.withOpacity(0.4),
+                    color: Colors.black.withOpacity(0.8),
                     offset: const Offset(2, 2),
                     blurRadius: 10,
                   ),
