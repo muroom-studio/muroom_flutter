@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:muroom_flutter/widgets/appbar/bottom_app_bar.dart';
 import 'package:muroom_flutter/widgets/top_app_bar.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class MyPageScreen extends StatelessWidget {
+  const MyPageScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
         child: TopAppBar(),
       ),
       body: Center(
-        child: Text('HOME'),
+        child: Text('MY PAGE'),
       ),
       bottomNavigationBar: BotAppBar(),
     );
