@@ -1,16 +1,15 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    // Future.delayed(const Duration(seconds: 2), () {
-    //   GoRouter.of(context).go('/');
-    // });
+    Future.delayed(const Duration(seconds: 2), () {
+      GoRouter.of(context).go('/');
+    });
 
     return Scaffold(
       body: Container(
