@@ -1,19 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:muroom_flutter/data/rental_studio_data.dart';
-import 'package:muroom_flutter/widgets/studio_carousel/studio_carousel_element.dart';
+import 'package:muroom_flutter/data/deco_studio_data.dart';
 
-class StudioCarousel extends StatelessWidget {
+class DecoCarousel extends StatelessWidget {
   final String contentTitle;
 
-  const StudioCarousel({
-    super.key,
-    this.contentTitle = '',
-  });
+  const DecoCarousel({super.key, required this.contentTitle});
 
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
           margin: const EdgeInsets.only(left: 15),
@@ -29,16 +24,17 @@ class StudioCarousel extends StatelessWidget {
           height: 220,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
-            itemCount: RentalStudioData.length,
+            itemCount: DecoStudioData.length,
             itemBuilder: (context, index) {
               final margin = index == 0
                   ? const EdgeInsets.only(left: 15, right: 0)
-                  : index == RentalStudioData.length - 1
+                  : index == DecoStudioData.length - 1
                       ? const EdgeInsets.only(left: 7, right: 15)
                       : const EdgeInsets.only(left: 7);
+              return null;
 
-              return StudioCarouselElement(
-                  margin: margin, studio: RentalStudioData[index]);
+              // return StudioCarouselElement(
+              //     margin: margin, studio: DecoStudioData[index]);
             },
           ),
         ),
