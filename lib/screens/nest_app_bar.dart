@@ -19,7 +19,7 @@ class NestAppBarScreen extends StatelessWidget {
         ? const SplashScreen()
         : Scaffold(
             appBar: const PreferredSize(
-              preferredSize: Size.fromHeight(56.0),
+              preferredSize: Size.fromHeight(60.0),
               child: TopAppBar(),
             ),
             body: nestedWidget,

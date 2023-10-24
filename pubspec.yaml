@@ -64,9 +64,18 @@ flutter:
   assets:
     - assets/images/MUROOM_LOGO.png
     - assets/images/MUROOM_LOGO_SHADOW.png
-    - assets/icons/search.svg
+    - assets/images/studio_1.jpg
+    - assets/images/studio_2.jpg
+    - assets/images/studio_3.jpg
+    - assets/images/studio_4.jpg
     - assets/icons/menu.svg
+    - assets/icons/search.svg
     - assets/icons/heart.svg
+    - assets/icons/home.svg
+    - assets/icons/location.svg
+    - assets/icons/community.svg
+    - assets/icons/message.svg
+    - assets/icons/user.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
