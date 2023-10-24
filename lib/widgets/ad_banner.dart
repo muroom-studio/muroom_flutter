@@ -11,7 +11,7 @@ class AdBanner extends StatelessWidget {
     return Container(
       width: fullWidth
           ? MediaQuery.of(context).size.width
-          : MediaQuery.of(context).size.width * 0.9,
+          : MediaQuery.of(context).size.width - 30,
       height: fullWidth ? 160 : 120,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(fullWidth ? 0 : 5)),
