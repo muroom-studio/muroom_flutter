@@ -8,9 +8,9 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Future.delayed(const Duration(seconds: 2), () {
-      GoRouter.of(context).go('/');
-    });
+    // Future.delayed(const Duration(seconds: 2), () {
+    //   GoRouter.of(context).go('/');
+    // });
 
     return Scaffold(
       body: Container(
@@ -58,9 +58,8 @@ class SplashScreen extends StatelessWidget {
             const SizedBox(height: 28),
             Text(
               'muroom studio',
-              style: GoogleFonts.mina(
+              style: TextStyle(
                 fontSize: 28,
-                // fontWeight: FontWeight.bold,
                 color: Colors.white,
                 shadows: [
                   Shadow(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'package:muroom_flutter/screens/chat.dart';
 import 'package:muroom_flutter/screens/community.dart';
@@ -65,7 +66,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textTheme = GoogleFonts.minaTextTheme(
+      Theme.of(context).textTheme, // 기존 테마를 가져와 Google Fonts를 적용
+    );
+
+    final theme = ThemeData(
+      textTheme: textTheme,
+      // 다른 테마 속성들도 설정할 수 있음
+    );
     return MaterialApp.router(
+      theme: theme,
       routeInformationProvider: _router.routeInformationProvider,
       routeInformationParser: _router.routeInformationParser,
       routerDelegate: _router.routerDelegate,
