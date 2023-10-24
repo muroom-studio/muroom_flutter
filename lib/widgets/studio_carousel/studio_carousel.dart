@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:muroom_flutter/data/rental_studio_data.dart';
-import 'package:muroom_flutter/widgets/studio_carousel_element.dart';
+import 'package:muroom_flutter/widgets/studio_carousel/studio_carousel_element.dart';
 
 class StudioCarousel extends StatelessWidget {
   final String contentTitle;

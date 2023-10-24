@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:muroom_flutter/screens/splash.dart';
-import 'package:muroom_flutter/widgets/appbar/bottom_app_bar.dart';
-import 'package:muroom_flutter/widgets/appbar/top_app_bar.dart';
+import 'package:muroom_flutter/widgets/app_bar/bottom_app_bar.dart';
+import 'package:muroom_flutter/widgets/app_bar/top_app_bar.dart';
 
 class NestAppBarScreen extends StatelessWidget {
   final Widget nestedWidget;
