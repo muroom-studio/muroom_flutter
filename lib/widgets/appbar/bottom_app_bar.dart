@@ -13,7 +13,7 @@ class BotAppBar extends StatelessWidget {
         children: [
           IconButton(
             onPressed: () {
-              GoRouter.of(context).go('/home');
+              GoRouter.of(context).go('/');
             },
             icon: const Icon(Icons.home_rounded),
           ),
@@ -37,7 +37,7 @@ class BotAppBar extends StatelessWidget {
           ),
           IconButton(
             onPressed: () {
-              GoRouter.of(context).go('/my_page');
+              GoRouter.of(context).go('/my-page');
             },
             icon: const Icon(Icons.person_rounded),
           ),

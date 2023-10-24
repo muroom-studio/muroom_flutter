@@ -6,8 +6,9 @@ import 'package:muroom_flutter/screens/chat.dart';
 import 'package:muroom_flutter/screens/community.dart';
 import 'package:muroom_flutter/screens/map.dart';
 import 'package:muroom_flutter/screens/my_page.dart';
+import 'package:muroom_flutter/screens/nest_app_bar.dart';
 
-import 'package:muroom_flutter/screens/start.dart';
+import 'package:muroom_flutter/screens/splash.dart';
 import 'package:muroom_flutter/screens/home.dart';
 
 void main() {
@@ -22,31 +23,42 @@ class MyApp extends StatelessWidget {
   MyApp({Key? key}) : super(key: key);
 
   final GoRouter _router = GoRouter(
-    initialLocation: "/home",
+    navigatorKey: GlobalKey<NavigatorState>(),
+    initialLocation: "/splash",
     routes: [
-      GoRoute(
-        path: "/start",
-        builder: (context, state) => const StartScreen(),
-      ),
-      GoRoute(
-        path: "/home",
-        builder: (context, state) => const HomeScreen(),
-      ),
-      GoRoute(
-        path: "/map",
-        builder: (context, state) => const MapScreen(),
-      ),
-      GoRoute(
-        path: "/community",
-        builder: (context, state) => const CommunityScreen(),
-      ),
-      GoRoute(
-        path: "/chat",
-        builder: (context, state) => const ChatScreen(),
-      ),
-      GoRoute(
-        path: "/my-page",
-        builder: (context, state) => const MyPageScreen(),
+      ShellRoute(
+        navigatorKey: GlobalKey<NavigatorState>(),
+        builder: (context, state, child) => NestAppBarScreen(
+          nestedWidget: child,
+        ),
+        routes: [
+          GoRoute(
+            path: "/splash",
+            builder: (context, state) => const SplashScreen(),
+          ),
+          GoRoute(
+            path: "/",
+            builder: (context, state) => const HomeScreen(),
+            routes: [
+              GoRoute(
+                path: "map",
+                builder: (context, state) => const MapScreen(),
+              ),
+              GoRoute(
+                path: "community",
+                builder: (context, state) => const CommunityScreen(),
+              ),
+              GoRoute(
+                path: "chat",
+                builder: (context, state) => const ChatScreen(),
+              ),
+              GoRoute(
+                path: "my-page",
+                builder: (context, state) => const MyPageScreen(),
+              ),
+            ],
+          ),
+        ],
       ),
     ],
   );
