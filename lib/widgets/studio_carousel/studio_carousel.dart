@@ -29,16 +29,16 @@ class StudioCarousel extends StatelessWidget {
           height: 220,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
-            itemCount: RentalStudioData.length,
+            itemCount: rentalStudioData.length,
             itemBuilder: (context, index) {
               final margin = index == 0
                   ? const EdgeInsets.only(left: 15, right: 0)
-                  : index == RentalStudioData.length - 1
+                  : index == rentalStudioData.length - 1
                       ? const EdgeInsets.only(left: 7, right: 15)
                       : const EdgeInsets.only(left: 7);
 
               return StudioCarouselElement(
-                  margin: margin, studio: RentalStudioData[index]);
+                  margin: margin, studio: rentalStudioData[index]);
             },
           ),
         ),

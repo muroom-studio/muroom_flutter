@@ -1,6 +1,6 @@
 import 'package:muroom_flutter/models/rental_studio.dart';
 
-const RentalStudioData = [
+const rentalStudioData = [
   RentalStudio(
       id: 'fq35h8o4nehgs',
       name: 'BK Studio',

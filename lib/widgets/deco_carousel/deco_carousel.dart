@@ -26,15 +26,15 @@ class DecoCarousel extends StatelessWidget {
           height: 161,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
-            itemCount: DecoStudioData.length,
+            itemCount: decoStudioData.length,
             itemBuilder: (context, index) {
               final margin = index == 0
                   ? const EdgeInsets.only(left: 15, right: 0)
-                  : index == DecoStudioData.length - 1
+                  : index == decoStudioData.length - 1
                       ? const EdgeInsets.only(left: 7, right: 15)
                       : const EdgeInsets.only(left: 7);
               return DecoCarouselElement(
-                  margin: margin, deco: DecoStudioData[index]);
+                  margin: margin, deco: decoStudioData[index]);
 
               // return StudioCarouselElement(
               //     margin: margin, studio: DecoStudioData[index]);

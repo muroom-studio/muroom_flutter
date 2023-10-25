@@ -1,6 +1,6 @@
 import 'package:muroom_flutter/models/deco_studio.dart';
 
-const DecoStudioData = [
+const decoStudioData = [
   DecoStudio(
     id: 'a8g49jg',
     user: 'monte1',
