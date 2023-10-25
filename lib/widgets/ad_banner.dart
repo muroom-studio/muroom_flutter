@@ -9,6 +9,9 @@ class AdBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: fullWidth
+          ? const EdgeInsets.all(0)
+          : const EdgeInsets.only(left: 15, right: 15),
       width: fullWidth
           ? MediaQuery.of(context).size.width
           : MediaQuery.of(context).size.width - 30,
