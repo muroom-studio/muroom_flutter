@@ -56,7 +56,7 @@ class StudioCarouselElement extends StatelessWidget {
                   studio.address,
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(height: 1.2),
+                  style: const TextStyle(height: 1.2, fontSize: 14),
                 ),
                 Text(
                   '${studio.price} / 월',

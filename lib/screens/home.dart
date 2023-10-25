@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:muroom_flutter/widgets/ad_banner.dart';
+import 'package:muroom_flutter/widgets/deco_carousel/deco_carousel.dart';
 import 'package:muroom_flutter/widgets/studio_carousel/studio_carousel.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -31,7 +32,7 @@ class HomeScreen extends StatelessWidget {
             contentTitle: 'monte님의 동네 뮤룸 스튜디오',
           ),
           horizontalLine,
-          const StudioCarousel(
+          const DecoCarousel(
             contentTitle: '뮤룸 스튜디오 꾸미기',
           ),
           horizontalLine,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:muroom_flutter/data/deco_studio_data.dart';
+import 'package:muroom_flutter/widgets/deco_carousel/deco_carousel_element.dart';
 
 class DecoCarousel extends StatelessWidget {
   final String contentTitle;
@@ -9,6 +10,7 @@ class DecoCarousel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
           margin: const EdgeInsets.only(left: 15),
@@ -21,7 +23,7 @@ class DecoCarousel extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: 220,
+          height: 161,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemCount: DecoStudioData.length,
@@ -31,7 +33,8 @@ class DecoCarousel extends StatelessWidget {
                   : index == DecoStudioData.length - 1
                       ? const EdgeInsets.only(left: 7, right: 15)
                       : const EdgeInsets.only(left: 7);
-              return null;
+              return DecoCarouselElement(
+                  margin: margin, deco: DecoStudioData[index]);
 
               // return StudioCarouselElement(
               //     margin: margin, studio: DecoStudioData[index]);
