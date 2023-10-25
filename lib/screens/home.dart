@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:muroom_flutter/widgets/ad_banner.dart';
 import 'package:muroom_flutter/widgets/deco_carousel/deco_carousel.dart';
+import 'package:muroom_flutter/widgets/others_studios/others_studios.dart';
 import 'package:muroom_flutter/widgets/studio_carousel/studio_carousel.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -39,17 +40,8 @@ class HomeScreen extends StatelessWidget {
           const AdBanner(
             fullWidth: true,
           ),
-          const SizedBox(height: 10),
-          const Text('다른 뮤룸 스튜디오 구경하기 #1'),
-          const Text('다른 뮤룸 스튜디오 구경하기 #2'),
-          const Text('다른 뮤룸 스튜디오 구경하기 #3'),
-          const Text('다른 뮤룸 스튜디오 구경하기 #4'),
-          const Text('다른 뮤룸 스튜디오 구경하기 #5'),
-          const Text('다른 뮤룸 스튜디오 구경하기 #6'),
-          const Text('다른 뮤룸 스튜디오 구경하기 #7'),
-          const Text('다른 뮤룸 스튜디오 구경하기 #8'),
-          const Text('다른 뮤룸 스튜디오 구경하기 #9'),
-          const Text('다른 뮤룸 스튜디오 구경하기 #10'),
+          horizontalLine,
+          const OtherStudios(),
           // 이후 둘러보기로 이동
           // 둘러보기는 다른 뮤룸 스튜디오 구경 + 장비 소개
         ],
